@@ -74,27 +74,27 @@ public class Cat {
         for (int i = 1; i < 24; i++) {
     switch ((int) (Math.random()*h+1)) {
         case 1: eat();
+            System.out.println("Час " + i);
+            break;
         case 2: sleep();
+            System.out.println("Час " + i);
+            break;
         case 3: chaseMouse();
+            System.out.println("Час " + i);
+            break;
         case 4: play();
+            System.out.println("Час " + i);
+            break;
         case 5: sayMeow();
+            System.out.println("Час " + i);
+            break;
         case 6: rumble();
+            System.out.println("Час " + i);
             break;
         default:
             throw new IllegalStateException("Unexpected value: " + (int) (Math.random() * h + 1));
             }
         }
-    }
-    public static void main(String[] args) {
-        Cat alice = new Cat();
-        alice.name = "Alice";
-        alice.sayMeow();
-        alice.play();
-        alice.sleep();
-        alice.eat();
-        alice.chaseMouse();
-        alice.rumble();
-        alice.liveAnotherDay();
     }
 
 }
