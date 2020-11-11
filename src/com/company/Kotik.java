@@ -1,4 +1,5 @@
 package com.company;
+import java.util.Scanner;
 
 public class Kotik {
     private static boolean isHigh;
@@ -29,6 +30,18 @@ public class Kotik {
         System.out.println("Другой день.");
     }
 
+    public void doRandomEvent() {
+        switch((int)(Math.random()*24)){
+            case 1: play();
+            case 2: eat();
+            case 3: chaseMouse();
+            case 4: sleep();
+            case 5: sayMeow();
+            case 6: hungry();
+            default: break;
+        }
+    }
+
     public static void main(String[] args) {
         Kotik alice = new Kotik();
         alice.age = 3;
@@ -39,6 +52,7 @@ public class Kotik {
         alice.eat();
         alice.hungry();
         alice.chaseMouse();
+        alice.doRandomEvent();
 
         int hungrymin = 1;
         int hungrymax = 100;
